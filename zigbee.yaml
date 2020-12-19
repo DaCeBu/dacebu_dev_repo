@@ -10,13 +10,13 @@ test:
           - ..hobby_heating_link = sh..()['linkquality']
 
     hobby_temp_ist:
-        type: float
+        type: num
 
     hobby_heating_setpoint:
-        type: float
+        type: num
 
     hobby_heating_demand:
-        type: float
+        type: num
 
     hobby_heating_link:
-        type: float
+        type: num
