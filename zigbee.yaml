@@ -1,0 +1,25 @@
+# zigbee.yaml
+test:
+    hilfs_item:
+        type: dict
+        mqtt_topic_in: zigbee2mqtt/0x00158d00032f621f
+
+    hobby_temp_ist:
+        type: str
+        eval: str(sh...var_dict()['local_temperature'])
+        eval_trigger: ..var_dict
+
+    hobby_heating_setpoint:
+        type: str
+        eval: str(sh...var_dict()['occupied_heating_setpoint'])
+        eval_trigger: ..var_dict
+
+    hobby_heating_demand:
+        type: str
+        eval: str(sh...var_dict()['pi_heating_demand'])
+        eval_trigger: ..var_dict
+
+    hobby_heating_link:
+        type: str
+        eval: str(sh...var_dict()['linkquality'])
+        eval_trigger: ..var_dict
