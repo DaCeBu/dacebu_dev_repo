@@ -1,24 +1,24 @@
 version: "2"
 services:
-  deconz:
-    image: marthoc/deconz
-    container_name: deconz
-    network_mode: host
-    restart: always
-    volumes:
-      - ./data/deconz:/root/.local/share/dresden-elektronik/deCONZ
-    devices:
-      - /dev/ttyAMA0
-    environment:
-      - DECONZ_WEB_PORT=8585
-      - DECONZ_WS_PORT=444
-      - DECONZ_VNC_MODE=1
-      - DECONZ_VNC_PORT=5900
-      - DEBUG_INFO=1
-      - DEBUG_APS=0
-      - DEBUG_ZCL=0
-      - DEBUG_ZDP=0
-      - DEBUG_OTAU=0
+  # deconz:
+  #   image: marthoc/deconz
+  #   container_name: deconz
+  #   network_mode: host
+  #   restart: always
+  #   volumes:
+  #     - ./data/deconz:/root/.local/share/dresden-elektronik/deCONZ
+  #   devices:
+  #     - /dev/ttyAMA0
+  #   environment:
+  #     - DECONZ_WEB_PORT=8585
+  #     - DECONZ_WS_PORT=444
+  #     - DECONZ_VNC_MODE=1
+  #     - DECONZ_VNC_PORT=5900
+  #     - DEBUG_INFO=1
+  #     - DEBUG_APS=0
+  #     - DEBUG_ZCL=0
+  #     - DEBUG_ZDP=0
+  #     - DEBUG_OTAU=0
 
   zigbee2mqtt:
     container_name: zigbee2mqtt
